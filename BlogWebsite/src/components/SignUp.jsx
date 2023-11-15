@@ -35,10 +35,17 @@ function Signup() {
             <Logo width="100%" />
           </span>
         </div>
-        <h2 className="text-center text-2xl font-bold my-5 leading-tight">
+        <h2 className="text-center text-2xl font-bold leading-tight">
           Sign up to create account
         </h2>
-
+        <p className="mt-2 text-center text-base text-black/60">
+          Already have an account?&nbsp;
+          <Link
+            to="/login"
+            className="font-medium text-primary transition-all duration-200 hover:underline">
+            Sign In
+          </Link>
+        </p>
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
         <form onSubmit={handleSubmit(create)}>
@@ -74,14 +81,6 @@ function Signup() {
             <Button type="submit" className="w-full">
               Create Account
             </Button>
-            <p className="mt-2 text-center text-base text-black/60">
-              Already have an account?&nbsp;
-              <Link
-                to="/login"
-                className="font-medium text-primary transition-all duration-200 hover:underline">
-                Sign In
-              </Link>
-            </p>
           </div>
         </form>
       </div>
